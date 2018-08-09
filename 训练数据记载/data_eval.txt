@@ -1,0 +1,28 @@
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.264
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.571
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.206
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.091
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.238
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.236
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.395
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.151
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.390
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.574
+INFO:root:Writing metrics to tf summary.
+INFO:root:DetectionBoxes_Precision/mAP: 0.263535
+INFO:root:DetectionBoxes_Precision/mAP (large): 0.440576
+INFO:root:DetectionBoxes_Precision/mAP (medium): 0.237675
+INFO:root:DetectionBoxes_Precision/mAP (small): 0.090713
+INFO:root:DetectionBoxes_Precision/mAP@.50IOU: 0.570963
+INFO:root:DetectionBoxes_Precision/mAP@.75IOU: 0.205678
+INFO:root:DetectionBoxes_Recall/AR@1: 0.236373
+INFO:root:DetectionBoxes_Recall/AR@10: 0.394874
+INFO:root:DetectionBoxes_Recall/AR@100: 0.411348
+INFO:root:DetectionBoxes_Recall/AR@100 (large): 0.574017
+INFO:root:DetectionBoxes_Recall/AR@100 (medium): 0.389584
+INFO:root:DetectionBoxes_Recall/AR@100 (small): 0.150869
+INFO:root:Losses/Loss/classification_loss: 3.337191
+INFO:root:Losses/Loss/localization_loss: 0.782565

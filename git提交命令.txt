@@ -1,0 +1,7 @@
+git status .
+git add .
+git commit -m"添加版本object-detection-v0.1说明"
+git tag -a object-detection-v0.1 -m "object-detection-v0.1"
+git push https://gitlab.com/Leopard-LeiBo/TensorFlowOnJetsonTX.git
+git push origin --tags
+
