@@ -1,0 +1,3 @@
+['filtered_detections/map/TensorArrayStack/TensorArrayGatherV3','filtered_detections/map/TensorArrayStack_1/TensorArrayGatherV3','filtered_detections/map/TensorArrayStack_2/TensorArrayGatherV3']:
+
+filtered_detections/map/TensorArrayStack/TensorArrayGatherV3:0

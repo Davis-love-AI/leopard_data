@@ -1,0 +1,7 @@
+迁移学习，训练特定层，只需要针对dense layer进行训练
+plt绘图时，导入的先后顺序，影响是否显示
+先 from matplotlib import pyplot as plt
+再 from utils import visualization_utils as vis_util
+
+from deployment import model_deploy 报错
+拷贝slim模块到pycharm中 然后设置为Sources Root 
