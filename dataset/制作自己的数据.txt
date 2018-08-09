@@ -1,0 +1,4 @@
+1.对于物体检测，检测的是长方形的框，推荐的软件是labmelmg(安装使用Windows下的exe安装可以避免很多坑)（产生的数据是xml格式的，和VOC的数据格式是一样的）
+2.对于实例分割，检测的不规则框，推荐使用labelme(产生的是json格式的数据，使用labelme的命令可以产出需要的文件)
+3.根据create_train_val_data.py 将数据分成训练数据和验证数据
+4.根据create_pascal_tf_record.py生成train.record 和val.record

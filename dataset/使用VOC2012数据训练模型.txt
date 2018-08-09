@@ -1,0 +1,55 @@
+1.安装pycocotools
+对于Linux：
+	下载安装包:
+	git clone https://github.com/pdollar/coco
+	进入PythonAPI目录:
+	cd coco/PythonAPI
+	编译安装ipython:
+	make -j8
+	python setup.py build_ext install
+	安装成功后,进入ipython解释器,即终端输入:
+	ipython
+	重新输入import COCO命令:
+	from pycocotools.coco import COCO
+
+对于Windows：
+	方法1.pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI
+	方法2.git clone https://github.com/pdollar/coco.git
+		  cd coco/PythonAPI
+		  # install pycocotools locally
+		  python setup.py build_ext --inplace
+		  # install pycocotools to the Python site-packages
+		python setup.py build_ext install
+		
+		报错：cl: 命令行 error D8021 :无效的数值参数“/Wno-cpp” 和 cl: 命令行 error D8021 :无效的数值参数“/Wno-unused-function”
+		删除报错，再编译
+2.配置依赖库：
+	1.conda install protobuf
+	2.编译Protobuf库，在object_detection同级目录打开终端运行：
+		cd E:\TensorFlow\GitHub\models\research
+		protoc object_detection\protos\*.proto --python_out=.
+	3.在research目录下运行：
+		python setup.py install
+	4.进入slim目录运行：
+		python setup.py install
+	将research和slim添加环境变量
+3.具体的训练流程参考https://blog.csdn.net/wei_guo_xd/article/details/78585555
+4.问题一：oom
+	修改配置文件中的batchsize
+5.对于使用voc2012的数据，配置文件中的num_class是20，不修改，如果使用自己的数据，根据实际情况修改
+6.当train和eval先后执行后，在tensorboard 可以看到连续的数据，如果执行完train结束后，再执行eval，只能看到最后一步evaluate的数据
+7.问题：from deployment import model_deploy 报错
+	拷贝slim模块到pycharm中 然后设置为Sources Root 
+8.No module named 'object_detection'
+
+在object_detection上级目录，
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/object_detection
+在slim上级目录，
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+
+9.No module named 'pycocotools'
+安装pycocotools
+python setup.py build_ext install
+
+
+		  

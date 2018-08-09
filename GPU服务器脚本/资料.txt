@@ -1,0 +1,31 @@
+teamviewer试试  1  062 007 395
+8157
+
+附件是登录GPU服务器的操作步骤，登录方式
+地址：124.79.222.166
+方式：ssh/vsftpd
+账号密码：leopard/123
+default port:22
+192.168.0.162  leopard/leopard666&888!@#
+
+teamviewer 1 112 076 834
+7452
+
+3474
+
+
+https://github.com/karolmajek/keras-retinanet/blob/master/examples/ResNet50RetinaNet-Video.ipynb
+
+https://www.youtube.com/watch?v=KYueHEMGRos
+
+
+grub rescue>root=(hd0,msdos7)
+grub rescue>prefix=/boot/grub //grub路径设置
+grub rescue>set root=(hd0,msdos7)
+grub rescue>set prefix=(hd0,msdos7)/boot/grub
+grub rescue>insmod normal //启动normal启动
+
+grub rescue>normal
+
+邮件账号：yunlongw@leopardimaging.com
+密码：YunlongW2018@
