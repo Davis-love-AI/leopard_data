@@ -1,0 +1,14 @@
+参考资料https://www.zhihu.com/question/34348272
+1.通过U盘安装PE系统，硬盘分区，确认主分区的分区类型是GPT，对应的采用UFEI引导
+2.固态硬盘需要enabling AHCI mode（这个很重要）
+3.将bioss中安全启动去掉，ppt security 去掉
+4.为了能够识别U盘，需要将启动的方式，
+Boot Mode改成Legacy
+5.在系统安装好之后，可以将Boot Mode的启动的方式改回原来的UFEI
+6.在安装系统的时候，联网，这样会自动激活（猜测）
+
+
+https://blog.csdn.net/jarvenman/article/details/54630301
+
+How to Fix the Inaccessible Boot Device Error in Windows 10
+参考资料：https://www.makeuseof.com/tag/inaccessible-boot-device-windows-10/

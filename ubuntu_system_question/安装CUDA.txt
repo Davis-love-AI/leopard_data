@@ -1,0 +1,38 @@
+﻿1.安装显卡
+	软件更新/附加驱动/NVIDAI/
+2.安装CUDA
+	禁用nouveau
+		sudo vim /etc/modprobe.d/blacklist.conf
+			blacklist nouveau
+			options nouveau modeset=0
+		sudo update-initramfs -u
+		lsmod | grep nouveau
+		sudo service lightdm stop
+		按ctrl+alt+f1进入命令行界面。 
+	安装选项中，显卡驱动不再安装
+3.添加环境变量
+
+设置环境变量。
+
+终端中输入 $ sudo gedit /etc/profile
+在打开的文件末尾，添加以下两行。
+64位系统：
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64\
+                                                   ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+32位系统：
+
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib\
+                                                   ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+保存文件，并重启。因为source /etc/profile是临时生效，重启电脑才是永久生效。
+
+这里有点与官方安装文档稍有不同，需要说明：
+官方文档里说只需在终端中运行上述两条export语句即可，但如果不将它们不写入/etc/profile文件的话，这样的环境变量在你退出终端后就消失了，不起作用了，所以写入才是永久的做法。
+4.安装cudnn
+	sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+	sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+	sudo chmod a+r /usr/local/cuda/include/cudnn.h

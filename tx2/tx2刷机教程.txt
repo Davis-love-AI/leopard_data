@@ -1,0 +1,7 @@
+1.虚拟机/可移动设备/NVIDIA APX，如果没有显示，按住按reset键，再一直按住recover键，再按一下reset1键后过大约两秒
+2.lsusb  显示 NVidia Corp
+a、断开电源，保证开发板处于断电关机状态
+b、用网线连到路由器上，也可插上鼠标键盘
+c、用Micro USB线把开发板连到电脑上（类似于安卓手机连电脑）
+d、接通AC电源，按下power键，开机
+e、刚一开机，就长按Recovery键不松开，然后点按一下Reset键，过2s以后才松开Reset键，然后松开Recovery此时开发板处于强制恢复模式

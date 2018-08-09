@@ -1,0 +1,14 @@
+﻿1.如果采用nv-tensorrt-repo-ubuntu1604-ga-cuda9.0-trt3.0.4-20180208_1-1_amd64.deb方式安装tensorRT,CUDA也必须是.deb文件方式安装
+2. Ubuntu 14.04 x86_64 只能采用tar文件安装
+3.推荐下载Ubuntu 14.04 x86_64的tar文件安装，更稳定，支持16.04，18.04Ubuntu系统，也支持pip安装tensorlow
+4.Meanwhile, if you’re using pip install tensorflow-gpu, simply download TensorRT files for Ubuntu 14.04 not16.04, no matter what version of Ubuntu you’re running.
+5.安装pycuda ./configure.py --cuda-root = /usr/local/cuda-9.0/
+6.export lib 直接在命令行中执行没有效果，退出命令行。export 无效，需要gedit 添加进去，并source ~/.bashrc
+7.使用Ubuntu 14.04 tar安装tensorRT，可以直接通过pip install tensorflow-gpu安装，并且自带tensorflow的tensorRT
+8 安装pycuda，需要
+	$ cd pycuda-VERSION
+	$ su -c "python distribute_setup.py" # this will install distribute
+	$ su -c "easy_install numpy" # this will install numpy using distribute
+	
+	
+	参考https://wiki.tiker.net/PyCuda/Installation/Linux

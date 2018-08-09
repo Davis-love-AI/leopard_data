@@ -1,0 +1,9 @@
+1.安装pip
+# wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py 
+wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+2.安装easy install
+sudo apt-get install python-setuptools python-dev build-essential 
+
+2.apt-get unable locate package 安装的包名
+sudo apt-get update

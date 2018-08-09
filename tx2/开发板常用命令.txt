@@ -1,0 +1,36 @@
+1.安装驱动
+sudo dd if=./tegra210-jetson-tx1-p2597-2180-a01-devkit.dtb of=/dev/disk/by-partlabel/RP1
+sudo dd if=./tegra210-jetson-tx1-p2597-2180-a01-devkit.dtb of=/dev/disk/by-partlabel/DTB
+sync
+2.刷纯净板
+sudo ./flash.sh jetson-tx1 mmcblk0p1
+3.邮箱
+yunlongw@leopardimaging.com
+Password: YunlongW2018@
+
+sudo ./flash.sh -r -k kernel-dtb jetson-tx2 mmcblk0p1
+4.检查安装
+First be sure you are really running L4T R28.2:
+   head -n1 /etc/nv_tegra_release
+
+Check the nvidia packages are ok:
+    sha1sum -c /etc/nv_tegra_release
+
+If still the same, check which CUDA versions you have:
+   ls -d /usr/local/cuda*
+
+Usually /usr/local/cuda is a symbolic link to the last installed version, so you may get details with
+	cat /usr/local/cuda/version.txt
+	nvcc --version
+
+You may also check with deviceQuery tool:
+	cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+	make   # just in case it would not have already been built.
+	./deviceQuery
+5.解决28.1风扇问题：
+cp Image /boot/Image
+cp ziImage /boot/zImage
+sudo dd if=./tegra210-jetson-tx1-p2597-2180-a01-devkit.dtb of=/dev/disk/by-partlabel/RP1
+sudo dd if=./tegra210-jetson-tx1-p2597-2180-a01-devkit.dtb of=/dev/disk/by-partlabel/DTB
+sync
+reboot

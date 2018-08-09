@@ -1,0 +1,27 @@
+参考文档：https://www.cnblogs.com/matthewli/p/6715553.html
+sudo ./NVIDIA-Linux-x86_64-xxx.run -no-x-check -no-nouveau-check -no-opengl-files //只有这样安装才不会出现循环登陆的问题
+
+1、打开终端，先删除旧的驱动：
+
+sudo apt-get purge nvidia*
+
+
+2禁用自带的 nouveau nvidia驱动 （important！）
+
+
+创建一个文件通过命令 sudo vim /etc/modprobe.d/blacklist-nouveau.conf
+
+并添加如下内容：
+
+blacklist nouveau
+options nouveau modeset=0
+
+再更新一下
+
+sudo update-initramfs -u
+
+修改后需要重启系统。确认下Nouveau是已经被你干掉，使用命令： lsmod | grep nouveau
+
+如果安装后驱动程序工作不正常，使用下面的命令进行卸载：
+
+sudo sh ~/NVIDIA-Linux-x86_64-367.44.run --uninstall

@@ -1,0 +1,5 @@
+1.使用JetPack-L4T-3.2-linux-x64_b196.run 安装，安装完后，CUDA 版本9.0，cudnn版本7.0
+2.安装tensorflow1.6版本（tf 版本1.5以上要求CUDA 的版本得是9.0)
+3.安装pip
+4.通过pip install tensorflow(版本号）
+5.安装的过程中，可能会遇到pip，matplotlib报错(根据报错信息安装需要的依赖)（后面会将常见的错误列举出来）
