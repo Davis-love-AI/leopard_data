@@ -5,3 +5,6 @@ git tag -a object-detection-v0.1 -m "object-detection-v0.1"
 git push https://gitlab.com/Leopard-LeiBo/TensorFlowOnJetsonTX.git
 git push origin --tags
 
+git push -u origin master
+
+

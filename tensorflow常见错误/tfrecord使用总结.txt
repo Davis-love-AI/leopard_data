@@ -1,0 +1,14 @@
+1.本案例是基于谷歌的object_detection
+2.create_mydataset_tf_record_all.py是将自己的数据，转换成tfrecord文件，要求的格式是CSV形式
+一个数据集所有的标注文件，在一个csv文件中。它会遍历指定的文件夹下面，将所有的图片和标注写入
+record文件
+3.parse_tf_record.py会直接解析record文件，但是解析出来的x_min, y_min, x_max, y_max是SparseTensorValue
+形如SparseTensorValue(indices=array([[0],
+       [1],
+       [2],
+       [3]], dtype=int64), values=array([0.26618358, 0.45460546, 0.38775364, 0.43643317], dtype=float32), dense_shape=array([4], dtype=int64))
+对于图片的解析，需要选对方法tf.image.decode_png，否则，解析出来后，维度对应不上，无法reshape
+4.features中对于的字段的类型，要与生成时类型匹配
+5.parse_tf_record3.py使用的是tf.contrib.slim模块下面的方法 ，这样解析很好，不会出现什么问题，难度低
+
+6.使用tf.train.batch还有问题，没有解决
