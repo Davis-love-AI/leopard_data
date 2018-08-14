@@ -1,0 +1,8 @@
+ test_fc1, test_fc2, Ys = sess.run([test_fc1, test_fc2, fc3], feed_dict = {x1:xs1, x2:xs2, test_x1:test_img_raw, test_x2:test_img_raw1})
+ 
+ 原因：接收的参数名和run（）里面的参数名一样了，这样的话，第一次不会报错，下一次运行中，test_fc1，test_fc2变量名已有了，
+ 直接跑会和你前面定义的test_fc1，test_fc2相关运算冲突。 
+所以将接收的变量名改了就可以了。
+
+test1, test2, Ys = sess.run([test_fc1, test_fc2, fc3], 
+                                              feed_dict = {x1:xs1, x2:xs2, test_x1:test_img_raw, test_x2:test_img_raw1}) 

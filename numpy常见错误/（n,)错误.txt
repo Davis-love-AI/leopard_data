@@ -1,0 +1,46 @@
+现象1：
+import numpy as np
+a = [0.3864865, 0.5820261, 0.8322162, 0.6623611]
+b = np.array(a)
+print(type(b))
+print(np.shape(b))
+print(b[:,1])
+
+
+<class 'numpy.ndarray'>
+(4,)
+Traceback (most recent call last):
+  File "D:/data/project/object_detection_google_0716/numpy_Demo.py", line 9, in <module>
+    print(b[:,1])
+IndexError: too many indices for array
+
+
+对于类型是（n,) 无法读取对于的列
+
+
+修改为
+import numpy as np
+a = [0.3864865, 0.5820261, 0.8322162, 0.6623611]
+b = np.array(a)
+b2 = np.reshape(b,(4,1))
+print(type(b2))
+print(np.shape(b2))
+print(b2[:,1])
+
+现象2：
+当 a 不是一维的，不会报错：
+import numpy as np
+a = [[0.3864865, 0.5820261, 0.8322162, 0.6623611],[0.3, 0.5, 0.8, 0.6]]
+# a = [0.3864865, 0.5820261, 0.8322162, 0.6623611]
+b = np.array(a)
+
+# b2 = np.reshape(b,(1,4))
+print(type(b))
+print(np.shape(b))
+print(b[:,1])
+
+
+结果：
+<class 'numpy.ndarray'>
+(2, 4)
+[0.5820261 0.5      ]

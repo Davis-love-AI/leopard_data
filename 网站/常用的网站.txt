@@ -4,7 +4,6 @@ https://blog.csdn.net/jesse_mx/article/details/53315886
 https://www.jianshu.com/p/ad9bb5706731
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
 https://github.com/datitran/raccoon_dataset
-http://studyai.com/article/19c67a0f5ba444da
 http://www.cnblogs.com/bonelee/p/8311445.html
 https://www.ctolib.com/topics-130007.html
 https://zhuanlan.zhihu.com/p/24425116
