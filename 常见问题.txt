@@ -5,3 +5,9 @@ plt绘图时，导入的先后顺序，影响是否显示
 
 from deployment import model_deploy 报错
 拷贝slim模块到pycharm中 然后设置为Sources Root 
+
+3.pip list 可以展示所有安装的第三方的包
+可以 pip uninstall 卸载
+
+4.如何创建root账户和密码：
+sudo passwd root

@@ -1,0 +1,18 @@
+1.如何导入环境变量：
+在slim上级目录，
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+
+在object_detection上级目录，
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/object_detection
+这种方式每新开一个窗口，都得重新导入：
+
+方式二：
+gedit ~/.bashrc
+将`pwd` 换成object_detection的上一级的绝对路径
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/object_detection
+如：
+export PYTHONPATH=$PYTHONPATH:/home/nvidia/Downloads:/home/nvidia/Downloads/object_detection
+
+source ~/.bashrc
+
+2.如何安装object-detection 在 python dist-packages 有相应的.egg信息
