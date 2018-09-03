@@ -29,3 +29,5 @@ grub rescue>normal
 
 邮件账号：yunlongw@leopardimaging.com
 密码：YunlongW2018@
+
+gitlab 账号：yunlongw

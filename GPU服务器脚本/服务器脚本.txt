@@ -48,13 +48,10 @@ kill 进程id
 python create_mydataset_tf_record_all.py --label_map_path=/home/leopard/WYL/data/test_data/label/label.pbtxt
  --classes_to_use car,pedestrian,van,truck,person_sitting,cyclist,tram,misc
 
-python train.py --train_dir=/home/leopard/WYL/data/object_de_all/train_data/train0813 \
---pipeline_config_path=/home/leopard/WYL/data/object_de_all/train_data/config/ssd_mobilenet_v1_pets.config
+python train.py --train_dir=/home/leopard/WYL/data/object_de_all/train_data/train0823 --pipeline_config_path=/home/leopard/WYL/data/object_de_all/train_data/config/ssd_mobilenet_v1_pets.config
 
  
-python eval.py --checkpoint_dir=/home/leopard/WYL/data/object_de_all/train_data/train0731 \
---pipeline_config_path=/home/leopard/WYL/data/object_de_all/train_data/config/ssd_mobilenet_v1_pets.config \
---eval_dir=/home/leopard/WYL/data/object_de_all/train_data/eval0731
+python eval.py --checkpoint_dir=/home/leopard/WYL/data/object_de_all/train_data/train0822 --pipeline_config_path=/home/leopard/WYL/data/object_de_all/train_data/config/ssd_mobilenet_v1_pets.config --eval_dir=/home/leopard/WYL/data/object_de_all/train_data/eval0822
 
 /home/leopard/WYL/data/object_de_all/train_data/train0810/model.ckpt-24369   
 
